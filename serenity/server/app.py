@@ -17,7 +17,7 @@ db.init_app(app)
 
 @app.route('/')
 def home():
-    return 'Welcome to Chef Adams Pizzeria'
+    return 'Welcome to Serenity Sands Motel'
 
 
 

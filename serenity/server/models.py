@@ -18,8 +18,9 @@ class User(db.Model, SerializerMixin):
     name = db.Column(db.String)
 
     # ***PUT CONSTRAINT HERE***
-    telephone = db.Column(db.String)
+    telephone = db.Column(db.String(10))
     email = db.Column(db.String)
+    rooms = db.relationship ('Room', backref= 'user')
 
     def __repr__(self):
         return f'<User {self.id},{self. name},{self.telephone}, {self.email}'
@@ -33,8 +34,9 @@ class Room(db.Model,SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     number = db.Column(db.Integer)
     description = db.Column(db.String)
-
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
     foods = db.relationship ('Food', backref ='room')
+    
     def __repr__(self):
         return f'<Room{self.id}, {self.number}, {self.description}>'
 

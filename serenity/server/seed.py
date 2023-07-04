@@ -30,13 +30,16 @@ with app.app_context():
     db.session.add_all(users)
 
     rooms =[]
-    for i in range(50):
-        r = Room(
-            # number = fake.number.int(),
+    for u in users:
+        for i in range(20):
+            r = Room(
+            user= u,
             description = fake.sentence(),)
         rooms.append(r)
 
     db.session.add_all(rooms)
+
+    
 
     foods = []
     
@@ -44,7 +47,7 @@ with app.app_context():
     for i in range(30):
         f = Food(
             meal =rc(meals),
-            price = randint(1, 30),
+            price = randint(50, 100),
                   )
         foods.append(f)
 
@@ -60,5 +63,9 @@ with app.app_context():
         gyms.append(g)
 
         db.session.add_all(gyms)
+
+    rooms=[]
+    
+
 
     db.session.commit()

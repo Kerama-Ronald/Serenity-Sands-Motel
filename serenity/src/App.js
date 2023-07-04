@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
@@ -32,7 +32,7 @@ function App() {
     </div>
   );
 }
-=======
+
 // import logo from './logo.svg';
 // import './App.css';
 
@@ -56,6 +56,5 @@ function App() {
 //     </div>
 //   );
 // }
->>>>>>> 269adcc (first commit)
 
 // export default App;

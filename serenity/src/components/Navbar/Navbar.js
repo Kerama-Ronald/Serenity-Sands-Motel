@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import "../navbar.css";
 
 function Navbar() {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
+
   const navToggle = () => {
     if (active === "nav__menu") {
       setActive("nav__menu nav__active");
@@ -14,36 +16,47 @@ function Navbar() {
       setIcon("nav__toggler toggle");
     } else setIcon("nav__toggler");
   };
+
   return (
     <nav className="nav">
-      <a href="#" className="nav__brand">
+      <Link to="/" className="nav__brand">
         herdoy
-      </a>
+      </Link>
       <ul className={active}>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <Link to="/" className="nav__link">
             Home
-          </a>
+          </Link>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
-            About
-          </a>
+          <Link to="/dining" className="nav__link">
+            <span className="nav__name">Dining</span>
+          </Link>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
-            Portfolio
-          </a>
+          <Link to="/gym-wellness" className="nav__link">
+            <span className="nav__name">GYM & Wellness</span>
+          </Link>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
-            Skills
-          </a>
+          <Link to="/conference-rooms" className="nav__link">
+            <span className="nav__name">Conference Rooms</span>
+          </Link>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
-            Contact
-          </a>
+          <Link to="/contact" className="nav__link">
+            <span className="nav__name">Contact Us</span>
+          </Link>
+        </li>
+        <li className="nav__item">
+          <Link to="/book-now" className="nav__link">
+            <span className="nav__name">Book Now</span>
+          </Link>
+        </li>
+        <li className="nav__item">
+          <Link to="/signup" className="nav__link">
+            <span className="nav__name">Sign Up</span>
+          </Link>
         </li>
       </ul>
       <div onClick={navToggle} className={icon}>

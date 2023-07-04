@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+<<<<<<< HEAD
 import Navbar from "./components/Navbar/Navbar";
 import Home from './components/Home/Home';
 import Contact from './components/Contact/Contact';
@@ -10,6 +11,17 @@ import Gym from './components/Gym & wellness/Gym';
 import Meetings from './components/Meetings/Meetings';
 import Footeroverlay from './components/footer/Footeroverlay';
 import Newsletter from './components/footer/Newsletter';
+=======
+import Navbar from "./components/navbar/navbar";
+import Footer from './components/Footer/Footer';
+import Home from './components/home/Home';
+import Contact from './components/contact/contact';
+import Signup from './components/signup/signup';
+import Rooms from './components/rooms/rooms';
+import Dining from './components/Footer/Dining';
+import Gym from './components/Gym/Gym';
+import Meetings from './components/meetings/meetings';
+>>>>>>> 5123be9 (debugging error messages)
 
 function App() {
   return (

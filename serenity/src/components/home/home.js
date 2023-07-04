@@ -9,9 +9,13 @@ import Footeroverlay from '../footer/Footeroverlay'
 =======
 import React, { Component } from "react";
 import Countdown from "jquery-countdown";
+<<<<<<< HEAD:serenity/src/components/Home/Home.js
 >>>>>>> 7b12e2ec6dceb4b3f6fa7af96e16fda2aa7aa330
+=======
+import './Home.css';
+>>>>>>> 5123be9 (debugging error messages):serenity/src/components/home/home.js
 
-class HotelBooking extends Component {
+class Hotelbooking extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -87,4 +91,4 @@ class HotelBooking extends Component {
 >>>>>>> 7b12e2ec6dceb4b3f6fa7af96e16fda2aa7aa330
 }
 
-export default HotelBooking;
+export default Hotelbooking;

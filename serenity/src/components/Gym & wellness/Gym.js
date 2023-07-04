@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-
+import './Gym.css';
 const Header = () => {
   useEffect(() => {
     const toggleMenu = () => {

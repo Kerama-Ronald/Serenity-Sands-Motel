@@ -13,17 +13,17 @@ function Home() {
             <div class='home'>
                 <header>
                   <div class='tab'>
-
+                    
                   </div>
                 </header>
             </div>
         </div>
-        <Rooms /> 
+        {/* <Rooms /> 
         <Menu />
         <Meetings />
         <Gym />
         <Contact />
-        <Footeroverlay />
+        <Footeroverlay /> */}
 
 
 

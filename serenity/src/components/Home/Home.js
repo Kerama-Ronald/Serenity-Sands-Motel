@@ -1,9 +1,10 @@
 import React from 'react'
 import Rooms from '../Rooms/Rooms'
-import Dining from '../Footer/Dining'
+import Menu from '../dining/Menu'
 import Meetings from '../Meetings/Meetings'
-import Gym from '../Gym/Gym'
+import Gym from '../Gym & wellness/Gym'
 import Contact from '../Contact/Contact'
+import Footeroverlay from '../footer/Footeroverlay'
 
 function Home() {
   return (
@@ -12,16 +13,18 @@ function Home() {
             <div class='home'>
                 <header>
                   <div class='tab'>
-                    
+
                   </div>
                 </header>
             </div>
         </div>
         <Rooms /> 
-        <Dining />
+        <Menu />
         <Meetings />
         <Gym />
         <Contact />
+        <Footeroverlay />
+
 
 
          

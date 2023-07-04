@@ -20,8 +20,5 @@ const MenuItem = ({ title, price, tags }) => (
   </div>
 );
 
-<<<<<<< HEAD:serenity/src/components/dining/Menu.js
 export default MenuItem;
-=======
-export default MenuItem
->>>>>>> 5123be9 (debugging error messages):serenity/src/components/dining/menu.js
+

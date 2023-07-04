@@ -84,7 +84,7 @@
   
   /* Hero section */
   .hero {
-    background-image: url('../images/bg-hero.jpg');
+    background-image: url('./images/bg-hero\ .jpg');
     background-size: cover;
     height: 100vh;
     width: 100%;

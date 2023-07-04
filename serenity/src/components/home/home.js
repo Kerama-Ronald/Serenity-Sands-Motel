@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-import React from 'react'
-import Rooms from '../Rooms/Rooms'
-import Menu from '../dining/Menu'
-import Meetings from '../Meetings/Meetings'
-import Gym from '../Gym & wellness/Gym'
-import Contact from '../Contact/Contact'
-import Footeroverlay from '../footer/Footeroverlay'
-=======
 import React, { Component } from "react";
-import Countdown from "jquery-countdown";
-<<<<<<< HEAD:serenity/src/components/Home/Home.js
->>>>>>> 7b12e2ec6dceb4b3f6fa7af96e16fda2aa7aa330
-=======
-import './Home.css';
->>>>>>> 5123be9 (debugging error messages):serenity/src/components/home/home.js
+// import Countdown from "jquery-countdown";
+import './home.css';
+
 
 class Hotelbooking extends Component {
     constructor(props) {
@@ -42,53 +30,39 @@ class Hotelbooking extends Component {
         };
     }
 
-    componentDidMount() {
-        const countdown = new Countdown(this.refs.countdown, this.state.finalDate);
-        countdown.on("update", (event) => {
-            this.setState({
-                strftime: event.strftime
-            });
-        });
-    }
+    // componentDidMount() {
+    //     const countdown = new Countdown(this.refs.countdown, this.state.finalDate);
+    //     countdown.on("update", (event) => {
+    //         this.setState({
+    //             strftime: event.strftime
+    //         });
+    //     });
+    // }
 
-    handleRoomSelect = (roomId) => {
-        this.setState({
-            selectedRoom: roomId
-        });
-    }
+    // handleRoomSelect = (roomId) => {
+    //     this.setState({
+    //         selectedRoom: roomId
+    //     });
+    // }
 
     render() {
         return (
             <div>
-                <h1>Hotel Booking</h1>
+                {/* <h1>Hotel Booking</h1>
                 <div ref="countdown"></div>
-                <p>Countdown: {this.state.strftime}</p>
+                <p>Countdown:\\ {this.state.strftime}</p>
                 <select onChange={this.handleRoomSelect}>
                     {this.state.rooms.map((room) => (
                         <option key={room.id} value={room.id}>
                             {room.name} ({room.price})
                         </option>
                     ))}
-                </select>
+                </select> */}
             </div>
-<<<<<<< HEAD
-        </div>
-        {/* <Rooms /> 
-        <Menu />
-        <Meetings />
-        <Gym />
-        <Contact />
-        <Footeroverlay /> */}
 
+        )
 
-
-         
-    </div>
-  )
-=======
-        );
     }
->>>>>>> 7b12e2ec6dceb4b3f6fa7af96e16fda2aa7aa330
 }
 
 export default Hotelbooking;

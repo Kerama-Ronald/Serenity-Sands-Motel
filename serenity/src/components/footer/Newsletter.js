@@ -1,12 +1,5 @@
 import React from 'react';
-
-<<<<<<< HEAD:serenity/src/components/footer/Newsletter.js
-// import SubHeading from '../SubHeading/SubHeading';
 import './Newsletter.css';
-=======
-import SubHeading from '../SubHeading/SubHeading';
-import './NewsLetter.css';
->>>>>>> 5123be9 (debugging error messages):serenity/src/components/footer/newsletter.js
 
 const Newsletter = () => (
   <div className="app__newsletter">

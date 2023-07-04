@@ -2,36 +2,37 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/navbar/navbar";
-import Footer from './components/Footer/Footer';
-import Home from './components/home/Home';
+import FooterOverlay from './components/footer/Footeroverlay';
+import Hotelbooking from './components/home/home';
 import Contact from './components/contact/contact';
 import Signup from './components/signup/signup';
-import Rooms from './components/rooms/rooms';
-import Dining from './components/Footer/dining';
-import Gym from './components/Gym/Gym';
+import Rooms from './components/rooms/Rooms';
+import MenuItem from './components/dining/Menu';
+import Header from "./components/Gym & wellness/Gym"
 import Meetings from './components/meetings/meetings';
+import Newsletter from './components/footer/Newsletter';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-     
-     <Navbar/>
-   
-     <Routes>
-       <Route path="/" element={<Home/>}></Route>
-       <Route path="/menu" element={<Menu/>}></Route>
-       <Route path="/gym" element={<Gym/>}></Route>
-       <Route path="/conference-rooms" element={<Meetings/>}></Route>
-       <Route path="/contact" element={<Contact/>}></Route>
-       <Route path="/Signup" element={<Signup/>}></Route>
-       <Route path="/rooms" element={<Rooms/>}></Route>
-       <Route path="/dining" element={<Dining/>}></Route>
-     
-     </Routes>
-     </BrowserRouter>
-     <Footeroverlay/> 
-      <Newsletter/>
+
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Hotelbooking />}></Route>
+          {/* <Route path="/menu" element={<Menu />}></Route> */}
+          <Route path="/gym" element={<Header />}></Route>
+          <Route path="/conference-rooms" element={<Meetings />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/Signup" element={<Signup />}></Route>
+          <Route path="/rooms" element={<Rooms />}></Route>
+          <Route path="/dining" element={<MenuItem />}></Route>
+
+        </Routes>
+      </BrowserRouter>
+      <FooterOverlay />
+      <Newsletter />
     </div>
   );
 }

@@ -18,6 +18,17 @@ with app.app_context():
     Gym.query.delete()
     Room.query.delete()
    
+    
+    gyms = []
+
+    for i in range(15):
+        g = Gym(
+            category = rc(categories),
+            price = randint(20,50),)
+        gyms.append(g)
+
+        db.session.add_all(gyms)
+
 
     users = []
     for i in range(50):
@@ -39,6 +50,12 @@ with app.app_context():
 
     db.session.add_all(rooms)
 
+    for g in gyms:
+        r = rc(rooms)
+        g.room = r
+        rooms.remove(r)
+    db.session.commit()
+
     
 
     foods = []
@@ -54,17 +71,9 @@ with app.app_context():
     db.session.add_all(foods)
 
 
-    gyms = []
+    
 
-    for i in range(15):
-        g = Gym(
-            category = rc(categories),
-            price = randint(20,50),)
-        gyms.append(g)
-
-        db.session.add_all(gyms)
-
-    rooms=[]
+    
     
 
 

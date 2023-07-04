@@ -13,11 +13,9 @@ db = SQLAlchemy(metadata=metadata)
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
 
-    # serialize_rules = ('-foods.room',)
+    serialize_rules = ('-rooms.user',)
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
-
-    # ***PUT CONSTRAINT HERE***
     telephone = db.Column(db.String(10))
     email = db.Column(db.String)
     rooms = db.relationship ('Room', backref= 'user')
@@ -29,12 +27,13 @@ class User(db.Model, SerializerMixin):
 class Room(db.Model,SerializerMixin):
     __tablename__ = 'rooms'
 
-    serialize_rules = ('-foods.room',)
+    serialize_rules = ('-user.rooms', '-gym.rooms',)
 
     id = db.Column(db.Integer, primary_key=True)
     number = db.Column(db.Integer)
     description = db.Column(db.String)
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+    gym_id = db.Column(db.Integer, db.ForeignKey('gyms.id'))
     foods = db.relationship ('Food', backref ='room')
     
     def __repr__(self):
@@ -44,7 +43,7 @@ class Room(db.Model,SerializerMixin):
 class Food(db.Model, SerializerMixin):
     __tablename__ = 'foods'
 
-    serialize_rules = ('-foods.pizza',)
+    serialize_rules = ('-room.foods',)
 
     id = db.Column(db.Integer, primary_key=True)
     meal = db.Column(db.String)
@@ -58,10 +57,12 @@ class Food(db.Model, SerializerMixin):
 class Gym(db.Model, SerializerMixin):
     __tablename__ = 'gyms'
 
-    # serialize_rules = ('-foods.pizza',)
+    serialize_rules = ('-rooms.gym',)
     id = db.Column(db.Integer, primary_key=True)
     category = db.Column(db.String)
     price = db.Column(db.Integer)
+    rooms = db.relationship ('Room', backref ='gym')
+
 
     def __repr__(self):
         return f'<Gym {self.id}, {self.category},{self.price}>'

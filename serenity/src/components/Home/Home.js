@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-import React from 'react'
-import Rooms from '../Rooms/Rooms'
-import Menu from '../dining/Menu'
-import Meetings from '../Meetings/Meetings'
-import Gym from '../Gym & wellness/Gym'
-import Contact from '../Contact/Contact'
-import Footeroverlay from '../footer/Footeroverlay'
-=======
 import React, { Component } from "react";
-import Countdown from "jquery-countdown";
->>>>>>> 7b12e2ec6dceb4b3f6fa7af96e16fda2aa7aa330
+// import Countdown from "jquery-countdown";
 
 class HotelBooking extends Component {
     constructor(props) {
@@ -38,14 +28,14 @@ class HotelBooking extends Component {
         };
     }
 
-    componentDidMount() {
-        const countdown = new Countdown(this.refs.countdown, this.state.finalDate);
-        countdown.on("update", (event) => {
-            this.setState({
-                strftime: event.strftime
-            });
-        });
-    }
+    // componentDidMount() {
+    //     // const countdown = new Countdown(this.refs.countdown, this.state.finalDate);
+    //     countdown.on("update", (event) => {
+    //         this.setState({
+    //             strftime: event.strftime
+    //         });
+    //     });
+    // }
 
     handleRoomSelect = (roomId) => {
         this.setState({
@@ -67,24 +57,8 @@ class HotelBooking extends Component {
                     ))}
                 </select>
             </div>
-<<<<<<< HEAD
-        </div>
-        {/* <Rooms /> 
-        <Menu />
-        <Meetings />
-        <Gym />
-        <Contact />
-        <Footeroverlay /> */}
-
-
-
-         
-    </div>
-  )
-=======
         );
     }
->>>>>>> 7b12e2ec6dceb4b3f6fa7af96e16fda2aa7aa330
 }
 
 export default HotelBooking;

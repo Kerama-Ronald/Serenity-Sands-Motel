@@ -10,7 +10,11 @@ function Home() {
     <div>
         <div className='homepage'>  
             <div class='home'>
-                
+                <header>
+                  <div class='tab'>
+                    
+                  </div>
+                </header>
             </div>
         </div>
         <Rooms /> 

@@ -45,3 +45,5 @@ function HotelCard(props) {
 		</article>
 	);
 }
+
+export default HotelCard;

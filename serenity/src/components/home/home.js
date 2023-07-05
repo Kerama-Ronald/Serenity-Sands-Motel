@@ -2,7 +2,8 @@ import HeaderBar from './components/HeaderBar';
 import FiltersBar from './components/FiltersBar';
 import Gallery from './components/Gallery';
 import EmptyGallery from './components/EmptyGallery';
-import './styles/style.css';
+//import './styles/style.css';
+import React from 'react';
 
 class HomePage extends React.Component {
 	constructor(props) {

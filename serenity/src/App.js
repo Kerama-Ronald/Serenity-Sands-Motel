@@ -10,6 +10,14 @@ import Header from "./components/Gym & wellness/Gym"
 import Meetings from './components/meetings/meetings';
 import Newsletter from './components/footer/Newsletter';
 import HomePage from './components/home/home';
+import FiltersBar from './components/home/HeaderBar';
+import HeaderBar from './components/home/HeaderBar';
+import EmptyGallery from './components/home/EmptyGallery';
+import Filter from './components/home/Filter';
+import Gallery from './components/home/Gallery';
+import HotelCard from './components/home/HotelCard';
+
+
 
 function App() {
   function getHotels() {
@@ -60,7 +68,14 @@ function App() {
       </BrowserRouter>
       <FooterOverlay />
       <Newsletter />
-    </div>
+      <HeaderBar/>
+      <FiltersBar />
+      <hotelsData />
+      <EmptyGallery />
+      <Gallery />
+      <Filter />
+      <HotelCard />
+         </div>
   );
 }
 

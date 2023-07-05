@@ -20,6 +20,64 @@ def home():
     return 'Welcome to Serenity Sands Motel'
 
 
+###users data###
+@app.route('/users')
+def get_users():
+    users = User.query.all()
+    user_data = []
+    for user in users:
+        user_data.append({
+            'id': user.id,
+            'name': user.name,
+            'telephone': user.telephone,
+            'email': user.email
+        })
+    return jsonify(user_data)
+
+###room data###
+@app.route('/rooms')
+def get_rooms():
+    rooms = Room.query.all()
+    room_data = []
+    for room in rooms:
+        room_data.append({
+            'id': room.id,
+            'number': room.number,
+            'description': room.description,
+            'user_id': room.user_id,
+            'gym_id': room.gym_id
+        })
+    return jsonify(room_data)
+
+###food data###
+@app.route('/foods')
+def get_foods():
+    foods = Food.query.all()
+    food_data = []
+    for food in foods:
+        food_data.append({
+            'id': food.id,
+            'meal': food.meal,
+            'price': food.price,
+            'room_id': food.room_id
+        })
+    return jsonify(food_data)
+
+###gym data###
+@app.route('/gyms')
+def get_gyms():
+    gyms = Gym.query.all()
+    gym_data = []
+    for gym in gyms:
+        gym_data.append({
+            'id': gym.id,
+            'category': gym.category,
+            'price': gym.price
+        })
+    return jsonify(gym_data)
+
+
+
 
 if __name__ == '__main__':
     app.run(port=5555)

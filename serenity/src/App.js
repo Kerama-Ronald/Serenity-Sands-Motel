@@ -5,7 +5,7 @@ import Navbar from "./components/navbar/navbar";
 import Home from './components/home/home';
 import Contact from './components/Contact/Contact';
 import Signup from './components/signup/signup';
-import Rooms from './components/rooms/rooms';
+import Rooms from './components/rooms/Rooms';
 import Menu from './components/dining/Menu';
 import Gym from './components/Gym & wellness/Gym';
 import Meetings from './components/meetings/meetings';

@@ -1,8 +1,12 @@
+.cover {
+    background-color: blue;
+}
+
 .sign-form {
     /* display:inline-table; */
     /* height: 450px;
     width: 350px; */
-    background-color: rgb(243, 6, 6);
+    background-color: rgb(107, 62, 62);
     /* margin: 35px; */
     /* margin-left: 450px; */
     padding-top: 10px;

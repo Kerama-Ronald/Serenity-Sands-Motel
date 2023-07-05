@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../Navbar/Navbar.css";
+import "./navbar.css";
 
 function Navbar() {
   const [active, setActive] = useState("nav__menu");
@@ -20,26 +20,26 @@ function Navbar() {
   return (
     <nav className="nav">
       <Link to="/" className="nav__brand">
-        herdoy
+        Serenity Sands Motel
       </Link>
       <ul className={active}>
         <li className="nav__item">
-          <Link to="/" className="nav__link">
+          <Link to="/Home" className="nav__link">
             Home
           </Link>
         </li>
         <li className="nav__item">
-          <Link to="/menu" className="nav__link">
+          <Link to="/dining" className="nav__link">
             <span className="nav__name">Dining</span>
           </Link>
         </li>
         <li className="nav__item">
-          <Link to="/gym" className="nav__link">
+          <Link to="/gym & wellness" className="nav__link">
             <span className="nav__name">GYM & Wellness</span>
           </Link>
         </li>
         <li className="nav__item">
-          <Link to="/conference-rooms" className="nav__link">
+          <Link to="/meetings" className="nav__link">
             <span className="nav__name">Conference Rooms</span>
           </Link>
         </li>

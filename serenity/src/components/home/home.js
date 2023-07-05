@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 // import Countdown from "jquery-countdown";
 
-class HotelBooking extends Component {
+import './home.css';
+
+class Hotelbooking extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -29,7 +31,7 @@ class HotelBooking extends Component {
     }
 
     // componentDidMount() {
-    //     // const countdown = new Countdown(this.refs.countdown, this.state.finalDate);
+    //     const countdown = new Countdown(this.refs.countdown, this.state.finalDate);
     //     countdown.on("update", (event) => {
     //         this.setState({
     //             strftime: event.strftime
@@ -61,4 +63,4 @@ class HotelBooking extends Component {
     }
 }
 
-export default HotelBooking;
+export default Hotelbooking;

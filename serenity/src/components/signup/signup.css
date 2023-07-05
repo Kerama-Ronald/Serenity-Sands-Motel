@@ -1,0 +1,34 @@
+.sign-form {
+    /* display:inline-table; */
+    /* height: 450px;
+    width: 350px; */
+    background-color: rgb(243, 6, 6);
+    /* margin: 35px; */
+    /* margin-left: 450px; */
+    padding-top: 10px;
+    border: 1px solid #1b1a1aaf;
+      border-radius: 20px;
+      box-shadow: 0 7px 10px 0 rgb(0, 0, 0);
+      /* object-position: 50%; */
+    justify-content: center;
+
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  textarea {
+    /* width: 50%; */
+    /* padding: 0.5rem; */
+    margin-bottom: 1rem;
+    border: 2px solid #252424;
+    border-radius: 5px;
+    box-sizing:border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+  }
+
+  .login-font{
+    font-size: 16px;
+    font-style: oblique;
+  }

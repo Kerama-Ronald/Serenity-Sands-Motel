@@ -1,4 +1,4 @@
-  .form-group {
+  /* .form-group {
     width: 50%;
     margin-left: 29rem;
     margin-top: 5rem;
@@ -39,4 +39,53 @@
     padding: 1rem 4rem;
     border-radius: 8px;
     cursor: pointer;
+  } */
+  
+
+  .Contact {
+    width: 90vh;
+    margin: 5rem auto;
+    scroll-behavior: smooth;
+    border-radius: 10px;
+    border: 10px;
+    background-color: brown;
+
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  input,
+  select {
+    padding: 7px;
+    height: 30px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(182, 182, 182);
+    margin-bottom: 0.3rem;
+  }
+
+  textarea {
+    padding: 7px;
+    height: 70%;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(182, 182, 182);
+    margin-bottom: 0.3rem;
+  }
+  
+  form p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    color: red;
+    font-size: 12px;
+  }
+  
+  input:focus {
+    border: 1px solid rgb(0, 208, 255);
   }

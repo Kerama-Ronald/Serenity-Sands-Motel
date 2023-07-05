@@ -22,6 +22,7 @@ a {
   align-items: center;
   justify-content: space-around;
   height: 8vh;
+  scroll-behavior: smooth;
   background: #000;
 }
 

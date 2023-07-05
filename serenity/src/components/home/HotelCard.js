@@ -1,3 +1,4 @@
+import React from 'react';
 function HotelCard(props) {
 	const maxPrice = 4;
 	const getPriceIconsClasses = () => {

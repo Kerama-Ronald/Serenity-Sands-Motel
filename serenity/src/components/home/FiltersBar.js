@@ -1,5 +1,5 @@
-//import React from 'react';
-//import Filter from './Filter';
+import React from 'react';
+import Filter from './Filter';
 
 function FiltersBar(props) {
 	const today = new Date().toISOString().slice(0, 10);

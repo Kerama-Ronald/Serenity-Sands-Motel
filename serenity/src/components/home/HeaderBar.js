@@ -1,3 +1,4 @@
+import React from 'react';
 function HeaderBar(props) {
 	const {arrivalDate, leaveDate, country, price, size} = props;
 

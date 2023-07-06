@@ -11,6 +11,7 @@ import './home.css';
 import Navbar from "../navbar/navbar";
 import Hero from "../hero/Hero";
 import About from "../about/about";
+import Footer from "../footer/Footer";
   
 
 function Home(){
@@ -19,6 +20,7 @@ function Home(){
             <Navbar/>
             <Hero/>
             <About/>
+            <Footer/>
 
         </div>
      )

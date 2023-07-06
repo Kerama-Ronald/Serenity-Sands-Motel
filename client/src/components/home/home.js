@@ -13,7 +13,11 @@ import Hero from "../hero/Hero";
 import About from "../about/about";
 import Footer from "../footer/Footer";
 import Gym from "../gym/Gym";
-  
+import Body from "../body/body";
+import UserForm from "../userForm/userform";
+// import { Route, Switch } from "react-router";
+
+
 
 function Home(){
      return (
@@ -21,7 +25,9 @@ function Home(){
             <Navbar/>
             <Hero/>
             <About/>
+            <Body />
             <Gym/>
+            <UserForm/>
             <Footer/>
             
 

@@ -1,8 +1,10 @@
 import './App.css';
+
 // import { Route, Routes } from "react-router-dom";
 // import Home from "./components/home/home";
 // import Navbar from "./components/navbar/navbar";
 import Home from './components/home/home';
+
 // import Gym from "./components/gym/gym";
 // import Contact from "./components/contact/contact";
 // import About from "./components/about/about";
@@ -18,6 +20,7 @@ function App() {
      </Routes> */}
      {/* <Navbar/> */}
      <Home/>
+    
      
      
    

@@ -40,23 +40,125 @@ def users():
     )
     return response
 
+@app.route('/users/<int:id>')
+def user_by_id(id):
+    user = User.query.filter_by(id=id).first()
+
+    user_dict = user.to_dict()
+
+    response = make_response(
+        jsonify(user_dict),
+        200
+    )
+    response.headers["Content-Type"] ="application/json"
+
+    return response
+
+@app.route ('/users', methods = ['POST','DELETE','PATCH'])
+def post_users():
+    if request.method == 'POST':
+        new_user = User(
+            name=request.form.get("name"),
+            email=request.form.get("email"),
+            telephone=request.form.get("telephone")
+        )
+        db.sessiom.add(new_user)
+        db.session.commit()
+
+        user_dict =new_user.to_dict()
+
+        response= make_response(
+            jsonify(user_dict),
+            201
+            
+
+        )
+        return response
+    
+
+@app.route('/rooms')
+def rooms():
+
+    rooms =[]
+    for room in Room.query.all():
+        room_dict = {
+            "id": room.id,
+            "number": room.number,
+        }
+        rooms.append(room_dict)
+    response = make_response(
+        jsonify(rooms),
+        200
+    )
+    return response
 
 
 
 ###room data###
-@app.route('/rooms')
-def get_rooms():
-    rooms = Room.query.all()
-    room_data = []
-    for room in rooms:
-        room_data.append({
-            'id': room.id,
-            'number': room.number,
-            'description': room.description,
-            'user_id': room.user_id,
-            'gym_id': room.gym_id
-        })
-    return jsonify(room_data)
+@app.route ('/rooms', methods = ['POST','DELETE','PATCH'])
+def post_rooms():
+    if request.method == 'POST':
+        new_room = Room(
+            number=request.form.get("number")
+
+        )
+        db.session.add(new_room)
+        db.session.commit()
+
+        room_dict = new_room.to_dict()
+
+        response = make_response(
+            jsonify(room_dict),
+            201
+        )
+        return response
+    
+@app.route('/rooms/<int:id>', methods =['PATCH','DELETE'])
+def room_by_id(id):
+    room = Room.query.filter_by(id=id).first()
+
+    if room == None:
+        response_body= {
+            "message": "This room does not exist in our database. Please try again."
+        }
+        response = make_response(jsonify(response_body), 404)
+
+        return response
+    
+    else:
+        if request.method == 'PATCH':
+            room = Room.query.filter_by(id=id).first()
+
+            for attr in request.form:
+                setattr (room, attr, request.form.get(attr)) 
+
+            db.session.add(room)
+            db.session.commit()
+
+            room_dict= room.to_dict(),
+
+            response = make_response(
+                jsonify(room_dict),
+                200
+            )
+
+            return response
+        
+        elif request.method == 'DELETE':
+            db.session.delete(room)
+            db.session.commit()
+
+            response_body ={
+                "delete_successful": True,
+                "message": "Room deleted."   
+            }
+            response = make_response(
+                jsonify(response_body),
+                200
+            )
+
+            return response
+    
 
 ###food data###
 @app.route('/foods')

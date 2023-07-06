@@ -9,11 +9,11 @@ const Footer = () => (
         <h2>Serenity Sands</h2>
       <p>SOMETHING HERE</p>
       </div>
-      <div>
+      {/* <div>
         <a href ="/"><FaFacebook/></a>
         <a href ="/"><FaInstagram/></a>
         <a href ="/"><FaTwitter/></a>
-      </div>
+      </div> */}
       
 
     </div>

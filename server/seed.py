@@ -65,6 +65,7 @@ with app.app_context():
         f = Food(
             meal =rc(meals),
             price = randint(50, 100),
+            
                   )
         foods.append(f)
 

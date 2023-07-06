@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram} from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => (
-  <div className="Footer">
+  <div className="footer">
     <div className='top'>
       <div>
         <h2>Serenity Sands</h2>

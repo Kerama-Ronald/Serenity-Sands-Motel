@@ -12,6 +12,7 @@ import Navbar from "../navbar/navbar";
 import Hero from "../hero/Hero";
 import About from "../about/about";
 import Footer from "../footer/Footer";
+import Gym from "../gym/Gym";
   
 
 function Home(){
@@ -20,7 +21,9 @@ function Home(){
             <Navbar/>
             <Hero/>
             <About/>
+            <Gym/>
             <Footer/>
+            
 
         </div>
      )

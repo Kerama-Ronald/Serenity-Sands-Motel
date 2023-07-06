@@ -1,0 +1,41 @@
+.about{
+    margin: 4rem 6rem;
+
+}
+.room h1{
+    font-size: 3rem;
+
+}
+.first-about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+
+}
+.about-description{
+    width: 45%;
+    text-align: start;
+    font-size: 1.1rem;
+}
+.about-description h1{
+    padding-bottom: 1rem;
+}
+.image{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content:space-between ;
+    z-index: -99;
+    margin: 3rem;
+    gap: 5rem;
+}
+.image img{
+    width: 49%;
+    height: 350px;
+    object-fit:cover;
+    border-radius: 6px;
+    box-shadow: -1px 1px 62px -18px rgba(0,0, 0, 0.19);
+
+
+}

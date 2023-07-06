@@ -1,7 +1,7 @@
-// import HeaderBar from './components/HeaderBar';
-// import FiltersBar from './components/FiltersBar';
-// import Gallery from './components/Gallery';
-// import EmptyGallery from './components/EmptyGallery';
+ import HeaderBar from './HeaderBar';
+import FiltersBar from './FiltersBar';
+import Gallery from './Gallery';
+import EmptyGallery from './EmptyGallery';
 //import './styles/style.css';
 import React, { Component } from "react";
 // import Countdown from "jquery-countdown";

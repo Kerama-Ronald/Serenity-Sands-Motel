@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './gym.css';
+
 const Header = () => {
   useEffect(() => {
     const toggleMenu = () => {
@@ -17,24 +18,36 @@ const Header = () => {
       scrollUp.classList.toggle('show-scroll', window.scrollY >= 350);
     };
 
-    const navToggle = document.getElementById('nav-toggle');
-    const navClose = document.getElementById('nav-close');
-    const navLink = document.querySelectorAll('.nav-link');
+    const attachEventListeners = () => {
+      const navToggle = document.getElementById('nav-toggle');
+      const navClose = document.getElementById('nav-close');
+      const navLink = document.querySelectorAll('.nav-link');
 
-    navToggle.addEventListener('click', toggleMenu);
-    navClose.addEventListener('click', closeMenu);
-    navLink.forEach((link) => {
-      link.addEventListener('click', closeMenu);
-    });
-    window.addEventListener('scroll', scrollUp);
+      navToggle.addEventListener('click', toggleMenu);
+      navClose.addEventListener('click', closeMenu);
+      navLink.forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
+      window.addEventListener('scroll', scrollUp);
+    };
 
-    return () => {
+    const removeEventListeners = () => {
+      const navToggle = document.getElementById('nav-toggle');
+      const navClose = document.getElementById('nav-close');
+      const navLink = document.querySelectorAll('.nav-link');
+
       navToggle.removeEventListener('click', toggleMenu);
       navClose.removeEventListener('click', closeMenu);
       navLink.forEach((link) => {
         link.removeEventListener('click', closeMenu);
       });
       window.removeEventListener('scroll', scrollUp);
+    };
+
+    attachEventListeners();
+
+    return () => {
+      removeEventListeners();
     };
   }, []);
 

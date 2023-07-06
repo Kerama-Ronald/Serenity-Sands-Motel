@@ -22,17 +22,26 @@ def home():
 
 ###users data###
 @app.route('/users')
-def get_users():
-    users = User.query.all()
-    user_data = []
-    for user in users:
-        user_data.append({
+def users():
+    users= []
+    
+    
+    for user in User.query.all():
+        user_dict=({
             'id': user.id,
             'name': user.name,
             'telephone': user.telephone,
             'email': user.email
         })
-    return jsonify(user_data)
+        users.append(user_dict)
+    response= make_response(
+        jsonify(users),
+        200
+    )
+    return response
+
+
+
 
 ###room data###
 @app.route('/rooms')

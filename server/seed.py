@@ -45,7 +45,7 @@ with app.app_context():
         for i in range (1):
             r = Room(
                 user = u,
-                #  = fake.number(),
+                number = randint(1,20),
                 description = fake.sentence(),
                 gym= rc(gyms),
             )
@@ -59,23 +59,6 @@ with app.app_context():
         rooms.remove(r)
     db.session.commit()
     
-
-    # rooms =[]
-    # for u in users:
-    #     for i in range(20):
-    #         r = Room(
-    #         user= u,
-    #         description = fake.sentence(),)
-    #     rooms.append(r)
-
-    # db.session.add_all(rooms)
-    
-
-    # for g in gyms:
-    #     r = rc(rooms)
-    #     g.room = r
-    #     rooms.remove(r)
-    # db.session.commit()
 
     
 

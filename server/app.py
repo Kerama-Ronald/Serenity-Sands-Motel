@@ -4,11 +4,12 @@ from flask import Flask,jsonify,request, make_response
 from flask_migrate import Migrate
 
 from models import db,User, Food, Gym, Room
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
+cors = CORS(app)
 app.json.compact = False
 
 migrate = Migrate(app, db)

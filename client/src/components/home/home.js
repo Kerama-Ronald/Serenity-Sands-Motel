@@ -8,13 +8,13 @@
 
 import React from "react";
 import './home.css';
-import Navbar from "../navbar/navbar";
+// import Navbar from "../navbar/navbar";
 import Hero from "../hero/Hero";
 import About from "../about/about";
-import Footer from "../footer/Footer";
+
+import Room from "../room/room";
 import Gym from "../gym/Gym";
-import Body from "../body/body";
-import UserForm from "../userForm/userform";
+import Footer from "../footer/Footer";
 // import { Route, Switch } from "react-router";
 
 
@@ -22,12 +22,11 @@ import UserForm from "../userForm/userform";
 function Home(){
      return (
         <div className="homeContents">
-            <Navbar/>
+           
             <Hero/>
             <About/>
-            <Body />
+            <Room />
             <Gym/>
-            <UserForm/>
             <Footer/>
             
 

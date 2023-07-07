@@ -7,7 +7,7 @@ function UserForm({ roomId, onAddUser }) {
   const [formErrors, setFormErrors] = useState([]);
 
   useEffect(() => {
-    fetch("/users")
+    fetch("http://127.0.0.1:5000/users")
       .then((r) => r.json())
       .then(setUsers);
   }, []);

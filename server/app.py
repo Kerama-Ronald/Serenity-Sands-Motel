@@ -15,6 +15,12 @@ app.json.compact = False
 migrate = Migrate(app, db)
 
 db.init_app(app)
+@app.after_request
+def after_request(response):
+        response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization,true')
+        response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+        return response
+
 
 @app.route('/')
 def home():

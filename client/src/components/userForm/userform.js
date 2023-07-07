@@ -20,7 +20,7 @@ function UserForm({ roomId, onAddUser }) {
       name : name,
       
     };
-    fetch("/room_users", {
+    fetch("/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

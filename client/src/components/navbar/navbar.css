@@ -31,7 +31,7 @@
 
 }
 .nav-links:hover{
-  background-color:rgb(97, 81, 244);
+  background-color:rgb(91, 48, 1);
   color: antiquewhite;
   border-radius: 4px;
   transition: all 0.2s ease-in-out;
@@ -51,6 +51,6 @@ button{
 
 }
 button:hover{
-  background-color: rgb(97, 81, 244);
+  background-color: rgb(91, 48, 1);
   color: rgb(246, 247, 248);
 }

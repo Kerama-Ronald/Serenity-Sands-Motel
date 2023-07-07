@@ -31,10 +31,9 @@ function Room(){
     <section className="container">
     {rooms.map((room) => (
       <div key={room.id} className="card">
-        {/* <h2>
-          <Link to={`/rooms/${room.id}`}>{room.name}</Link>
-        </h2> */}
-        <p>Address: {room.address}</p>
+        <h2>Room Number: {room.number}</h2>
+        <p>Decription:{room.description}</p>
+        <h4>UserID:{room.user_id}</h4>
         <button onClick={() => handleDelete(room.id)}>Delete</button>
       </div>
     ))}

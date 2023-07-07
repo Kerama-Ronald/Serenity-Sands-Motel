@@ -7,7 +7,7 @@ function UserForm({ roomId, onAddUser }) {
   const [formErrors, setFormErrors] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/users")
+    fetch("/users")
       .then((r) => r.json())
       .then(setUsers);
   }, []);
@@ -47,14 +47,14 @@ function UserForm({ roomId, onAddUser }) {
         value={userId}
         onChange={(e) => setUserId(e.target.value)}
       >
-        <option value="">Select a room</option>
+        <option value="">Select a User</option>
         {users.map((user) => (
           <option key={user.id} value={user.id}>
             {user.name}
           </option>
         ))}
       </select>
-      <label htmlFor="user_id">Name:</label>
+      <label htmlFor="user_id">Room ID:</label>
       <input
         type="string"
         value={name}

@@ -28,7 +28,7 @@ function Room(){
   return(
 
 
-    <section className="container">
+    <section className= "container">
     {rooms.map((room) => (
       <div key={room.id} className="card">
         <h2>Room Number: {room.number}</h2>

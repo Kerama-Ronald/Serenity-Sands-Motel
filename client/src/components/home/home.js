@@ -15,6 +15,7 @@ import About from "../about/about";
 import Room from "../room/room";
 import Gym from "../gym/Gym";
 import Footer from "../footer/Footer";
+import Contact from "../contact/Contact";
 // import { Route, Switch } from "react-router";
 
 
@@ -27,6 +28,7 @@ function Home(){
             <About/>
             <Room />
             <Gym/>
+            <Contact/>
             <Footer/>
             
 

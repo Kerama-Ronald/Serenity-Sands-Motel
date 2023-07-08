@@ -13,11 +13,11 @@
     flex-direction: column;
     width: 20rem;
     border-radius: 7%;
-    box-shadow: #878686;
+    box-shadow:transparent;
     gap: 100px;
     margin-bottom: 20px;
     padding: 10px;
-    border: 0.9rem solid #737070;
+    border: 0.2rem solid #737070;
   }
   
   .image {

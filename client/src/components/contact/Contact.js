@@ -18,7 +18,7 @@ function Contact() {
 
   return (
     <div className="Contact">
-      <form className='form1' onSubmit={handleSubmit(onSubmit)} autoComplete="off">
+      <form className='contact-form' onSubmit={handleSubmit(onSubmit)} autoComplete="off">
         <h2>Send us a message</h2>
         <input
           {...register("userName", {

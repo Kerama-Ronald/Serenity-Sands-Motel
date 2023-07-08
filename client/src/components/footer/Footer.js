@@ -7,7 +7,10 @@ const Footer = () => (
     <div className='top'>
       <div>
         <h2>Serenity Sands</h2>
-      <p>SOMETHING HERE</p>
+      <p>The Sarova Whitesands Beach Resort and Spa is a luxury hotel in an
+idyllic setting on the shores of the Indian Ocean. The hotel, located
+on the North Coast of Mombasa, is nestled amongst towering palms and
+lush gardens with five pools including a quiet pool, a pool bar and a waterslide.</p>
       </div>
       {/* <div>
         <a href ="/"><FaFacebook/></a>

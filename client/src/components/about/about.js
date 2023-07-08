@@ -9,7 +9,7 @@ function About(){
            <div className="first-about"></div>
            <div className="about-description">
               <h2>OUR FACILITIES</h2>
-              <p>SOMETHING HERE</p>
+              <p>Serenity Sands is amongst the best hotels in Mombasa. It is both a luxury beach hotel as well as an adventure beach resort offering world class facilities and activities to both corporate travellers and families looking for fun and recreation. Our beachfront location on the pristine white sandy beaches of Mombasa makes it the ideal place to relax and enjoy all that Kenya has to offer you.</p>
            </div>
            <div className="image">
               

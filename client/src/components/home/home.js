@@ -16,7 +16,7 @@ import Room from "../room/room";
 import Gym from "../gym/Gym";
 import Footer from "../footer/Footer";
 import Contact from "../contact/Contact";
-import UserForm from "/home/alvin/Development/code/phase4/Serenity-Sands-Motel/client/src/components/userForm/userform.js"
+import UserForm from "../userForm/userform"
 // import { Route, Switch } from "react-router";
 
 
